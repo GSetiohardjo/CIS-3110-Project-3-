@@ -1,0 +1,30 @@
+<a routerLink="/" class="button fancy-button">
+  Home
+</a>
+
+<a routerLink="/console" class="button fancy-button">
+  Consoles
+</a>
+
+<a routerLink="/game" class="button fancy-button">
+  Games
+</a>
+
+<h2><b>Consoles Available for Purchase</b></h2>
+
+<div *ngFor="let console of consoles">
+
+  <h3>
+    <a
+      [title]="console.name + ' details'"
+      [routerLink]="['/consoles', console.id]">
+      {{ console.name }}
+    </a>
+  </h3>
+
+  <!-- . . . -->
+
+  <button type="button" (click)="share()">
+    Share
+  </button>
+</div>

@@ -1,0 +1,20 @@
+<a routerLink="/" class="button fancy-button">
+  Home
+</a>
+
+<a routerLink="/console" class="button fancy-button">
+  Consoles
+</a>
+
+<a routerLink="/game" class="button fancy-button">
+  Games
+</a>
+
+<h2><b>Game Details</b></h2>
+
+<div *ngIf="game">
+  <h3>{{ game.name }}</h3>
+  <h4>{{ game.price | currency }}</h4>
+  <p>{{ game.description }}</p>
+  <button type="button" (click)="addToCart(game)">Buy</button>
+</div>

@@ -1,0 +1,30 @@
+<a routerLink="/" class="button fancy-button">
+  Home
+</a>
+
+<a routerLink="/console" class="button fancy-button">
+  Consoles
+</a>
+
+<a routerLink="/game" class="button fancy-button">
+  Games
+</a>
+
+<h2><b>Games Available for Purchase</b></h2>
+
+<div *ngFor="let game of games">
+
+  <h3>
+    <a
+      [title]="game.name + ' details'"
+      [routerLink]="['/games', game.id]">
+      {{ game.name }}
+    </a>
+  </h3>
+
+  <!-- . . . -->
+
+  <button type="button" (click)="share()">
+    Share
+  </button>
+</div>
